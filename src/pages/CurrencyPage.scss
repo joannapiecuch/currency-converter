@@ -1,0 +1,60 @@
+@import "../styles/variables";
+
+.form__wrapper {
+  form, .form__group {
+    display: flex;
+  }
+
+  form {
+    justify-content: center;
+  }
+
+  .form__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__group {
+    flex-direction: column;
+    position: relative;
+    margin: 0 10px;
+  }
+
+  .form__field {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0 6px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid $color-gray;
+    outline: none;
+    position: relative;
+
+    &:focus ~.highlight {
+      width: 100%;
+    }
+
+    &--big {
+      font-size: 120px;
+      font-weight: 300;
+      margin-top: 50px;
+    }
+  }
+
+  .highlight {
+    display: block;
+    height: 1px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: $color-primary;
+    transition: 0.2s ease all;
+  }
+
+  .form__label {
+    font-size: 14px;
+    font-weight: bold;
+    color: $color-dark-gray;
+  }
+}
